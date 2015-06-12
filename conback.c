@@ -12,13 +12,13 @@ int main(int argc, char *argv[])
 
   if (argc != 3) {
     printf("Usage: %s <ip> <port>\n", argv[0]);
-    exit(-1);
+    return -1;
   }
   
   daemon(1, 0);
   
   servaddr.sin_family = AF_INET;
-  servaddr.sin_addr.s_addr = inet_addr(argv[1];
+  servaddr.sin_addr.s_addr = inet_addr(argv[1]);
   servaddr.sin_port = htons(atoi(argv[2]));
 
   sd = socket(PF_INET, SOCK_STREAM, 0);
