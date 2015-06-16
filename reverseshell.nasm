@@ -19,7 +19,7 @@ _start:
     push edx		; 0 means protocol determined by server
     inc edx
     push edx
-    mov ebx, edx	; store socket call sub function # 2 in bl	
+    mov ebx, edx	; store socket call sub function # 1 in bl	
     inc edx
     push edx
     
